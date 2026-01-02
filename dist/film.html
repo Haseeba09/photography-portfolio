@@ -5,27 +5,22 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Images by Haseeb Amin</title>
+  <title>Haseeb Amin - About Me</title>
   <meta name="description"
-    content="Hello there, I'm Sophia Williams – an intrepid explorer through the lens, on a relentless quest to capture the world's boundless wonders. Join me in unraveling the extraordinary through my lens as I embark on a visual journey like no other.">
+    content="o.">
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="dist/assets/favicon.ico" />
-  <link rel="stylesheet" href="dist/output.css" />
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+  <link rel="stylesheet" href="output.css" />
   <link rel="stylesheet" href="styles.css" />
   <!-- Alpine.js -->
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <!-- Start - Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
   <!-- End - Fonts -->
-  <!-- Start - Fancybox Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-  <!-- End - Fancybox Scripts -->
-  <script src="https://cdn.tailwindcss.com"></script>
+   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       content: ["./dist/*.{html,js}"],
@@ -51,11 +46,11 @@
     <nav id="nav" x-data="{ open: false }" role="navigation" class="w-full">
       <div class="container mx-auto flex flex-wrap items-center md:flex-no-wrap">
         <div class="mr-4 md:mr-8">
-          <a href="index.html"> 
+          <a href="../index.html"> 
            <img
-              src="dist/assets/images/website/logo2_w.png"
+              src="assets/images/website/logo2_w.png"
               alt="Images by Haseeb Amin"
-              class="h-8 md:h-10 w-auto"
+              class="h-8 md:h-10 w-auto" 
             />
           </a>
         </div>
@@ -82,18 +77,20 @@
           <ul id="ulMenu"
             class="flex flex-col duration-300 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0">
             <li class="group transition duration-300">
-              <a href="index.html" class="font-signika text-2xl tap-highlight-transparent">My work
+              <a href="../index.html" class="font-signika text-2xl tap-highlight-transparent">My work
                 <span class="hidden md:block h-0.5 bg-black dark:bg-white"></span>
-              </a>
-            </li>
-            <li class="group transition duration-300">
-              <a href="dist/about_me.html" class="font-signika text-2xl tap-highlight-transparent">Who I am
                 <span
                   class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
               </a>
             </li>
             <li class="group transition duration-300">
-              <a href="dist/contact.html" class="font-signika text-2xl tap-highlight-transparent">Get in touch
+              <a href="about_me.html" class="font-signika text-2xl tap-highlight-transparent">Who I am
+                <span
+                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+            </li>
+            <li class="group transition duration-300">
+              <a href="contact.html" class="font-signika text-2xl tap-highlight-transparent">Get in touch
                 <span
                   class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
               </a>
@@ -105,26 +102,52 @@
   </header>
   <!-- Content -->
   <div class="container mx-auto">
-    <h1 class="text-4xl pt-10 pb-8 font-bold">Portfolio</h1>
-    <div class="flex flex-col md:flex-row h-screen gap-4 md:h-[60vh]">
-      <!-- Left image -->
-      <a href="dist/photo.html" class="w-full md:w-1/2 h-1/2 md:h-full">
-        <img
-          src="dist/assets/images/website/vangogh.png"
-          alt="Page 1"
-          class="w-full h-full object-cover"
-        />
-      </a>
+    <h1 class="text-4xl pt-10 pb-8"><b>About me</b></h1>
+    
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-16">
+  
+            <!-- Text -->
+            <div class="order-1">
+                <h2 class="text-3xl font-bold mb-4">Just Friends</h2>
+                <p class="text-lg text-gray-700 mb-4 dark:text-gray-300">
+                A hopeless romantic confesses his feelings to his cynical best friend, leading to a rocky conversation about the meaning and depth of their relationship.
+                </p>
+                <ul class="max-w-md space-y-2 text-gray-300 text-body list-none list-inside">
+                    <li>
+                        Writer/Director: Ammad Shaikh
+                    </li>
+                    <li class="text-yellow-600">
+                        Producer: Haseeb Amin
+                    </li>
+                    <li>
+                        Editor: Georgia Fu
+                    </li>
+                    <li>
+                        DP: Ariano Treviño Angelone
+                    </li>
+                    <li>
+                        Starring: Abubakr Ali & Rosaline Elbay
+                    </li>
+                </ul>       
+            </div>
 
-      <!-- Right image -->
-      <a href="dist/film.html" class="w-full md:w-1/2 h-1/2 md:h-full">
-        <img
-          src="dist/assets/images/website/horseinmotion.gif"
-          alt="Page 2"
-          class="w-full h-full object-cover"
-        />
-      </a>
-    </div>
+            <!-- Media -->
+            <div class="order-2 md:order-1">
+                <div class="w-full aspect-video rounded-lg overflow-hidden">
+                <iframe
+                    src="https://player.vimeo.com/video/1118023909?badge=0&autopause=0"
+                    class="w-full h-full"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen
+                    title="Just Friends Trailer"
+                ></iframe>
+                </div>
+            </div>
+
+        </div>
+    
   </div>
   <!-- Footer -->
   <footer>
@@ -153,12 +176,8 @@
       </div>
     </div>
   </footer>
-  <!-- Script for the LightBox -->
-  <script>
-    Fancybox.bind("[data-fancybox]", {});
-  </script>
-  <script src="dist/fade_in.js"></script>
-  <script src="dist/menu.js"></script>
+  <script src="fade_in.js"></script>
+  <script src="menu.js"></script>
 </body>
 
 </html>
