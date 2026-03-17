@@ -59,7 +59,12 @@
            <img
               src="assets/images/website/logo2_w.png"
               alt="Images by Haseeb Amin"
-              class="block h-8 md:h-10 w-auto"
+              class="h-8 md:h-10 w-auto hidden dark:block"
+            />
+            <img
+              src="assets/images/website/logo_light.png"
+              alt="Images by Haseeb Amin"
+              class="block h-8 md:h-10 w-auto dark:hidden"
             />
           </a>
         </div>
@@ -262,10 +267,143 @@
     <h2 class="text-3xl pt-10 pb-8 font-bold">Photography</h2>
     
   <div x-data="{ active: null }" class="space-y-4">
-  <!-- Row 1 -->
-  <div id="event_photo" class="border rounded-lg overflow-hidden">
+
+<!-- Row 1 -->
+  <div id="press_photo" class="border rounded-lg overflow-hidden">
     <button
       @click="active = active === 1 ? null : 1;
+      $nextTick(() => {
+            setTimeout(() => {
+            const el = document.getElementById('press_photo');
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 50); // 50ms delay gives the content time to expand/collapse
+        })
+        "
+      class="flex justify-center items-center gap-3 w-full p-5 text-center font-medium"
+
+    >
+      <span>Press</span>
+      <svg class="w-5 h-5 transition-transform"
+        :class="{ 'rotate-180': active != 1 }"
+        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="m5 15 7-7 7 7" />
+      </svg>
+    </button>
+
+    <div x-show="active === 1" x-collapse class="p-5 border-t">
+      <div class="container mx-auto">
+
+             <!-- Media on Left -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-16">
+    
+
+                <!-- Text -->
+                <div class="order-2">
+                    <h2 class="text-3xl text-yellow-600 font-bold mb-4">Vogue Magazine</h2>
+                    <p class="text-lg italic text-gray-700 mb-4 dark:text-gray-300">
+                    This Iftar Dinner in New York City Served Up Orange Blossom Cake and Creative Inspiration
+                    </p>
+                    <ul class="max-w-md space-y-2 text-gray-600 dark:text-gray-300 text-body list-none list-inside mb-4">
+                        <li>
+                            Written by: Sarah Khan
+                        </li>
+                        <li class="text-yellow-600">
+                            Photo Credit: Haseeb Amin
+                        </li>
+                    </ul> 
+                    <a href="https://www.vogue.com/article/iftar-dinner-new-york-sana-raheem-hiba-irshad" 
+                    class="text-lg italic mb-4 text-blue-600">Link to Article</a>      
+                </div>
+
+                <!-- Media -->
+                <div class="order-2 md:order-1">
+                    <a href="https://www.vogue.com/article/iftar-dinner-new-york-sana-raheem-hiba-irshad">
+                        <img
+                            src="assets/images/press/vogue.png"
+                            alt="Generation Ad"
+                            class="w-full aspect-video object-cover rounded-lg"
+                        />
+                    </a>
+                </div>
+
+            </div>
+            <!-- Media on Right -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-16">
+    
+                <!-- Text -->
+                <div class="order-1">
+                    <h2 class="text-3xl text-yellow-600 font-bold mb-4">Middle East Eye</h2>
+                    <p class="text-lg italic text-gray-700 mb-4 dark:text-gray-300">
+                    NYC real estate expo promoting sale of 'stolen land' in Palestine descends into violence 
+                    </p>
+                    <ul class="max-w-md space-y-2 text-gray-600 dark:text-gray-300 text-body list-none list-inside mb-4">
+                        <li>
+                            Written by: MEE Staff
+                        </li>
+                        <li class="text-yellow-600">
+                            Photo Credit: Haseeb Amin
+                        </li>
+                    </ul> 
+                    <a href="https://www.middleeasteye.net/trending/new-york-real-estate-expo-stolen-land-sale-palestine-descends-violence" 
+                    class="text-lg italic  mb-4 text-blue-600">Link to Article</a>      
+                </div>
+
+                <!-- Media -->
+                <div class="order-2 md:order-1">
+                    <a href="https://www.middleeasteye.net/trending/new-york-real-estate-expo-stolen-land-sale-palestine-descends-violence">
+                        <img
+                            src="assets/images/press/mee.png"
+                            alt="Kitchen Closed"
+                            class="w-full aspect-video object-cover rounded-lg"
+                        />
+                    </a>
+                </div>
+
+            </div>
+            <!-- Media on Left -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-16">
+    
+
+                <!-- Text -->
+                <div class="order-2">
+                    <h2 class="text-3xl text-yellow-600 font-bold mb-4">New Lines Magazine</h2>
+                    <p class="text-lg italic text-gray-700 mb-4 dark:text-gray-300">
+                     Noon Meem Danish Brought the Black Experience to Urdu Poetry
+                    His work redefined what verse could say in Pakistan — and who it could speak for
+                    </p>
+                    <ul class="max-w-md space-y-2 text-gray-600 dark:text-gray-300 text-body list-none list-inside mb-4">
+                        <li>
+                            Written by: Samee Ahmad
+                        </li>
+                        <li class="text-yellow-600">
+                            Photo Credit: Haseeb Amin
+                        </li>
+                    </ul> 
+                    <a href="https://newlinesmag.com/essays/noon-meem-danish-brought-the-black-experience-to-urdu-poetry/" 
+                    class="text-lg italic mb-4 text-blue-600">Link to Article</a>      
+                </div>
+
+                <!-- Media -->
+                <div class="order-2 md:order-1">
+                    <a href="https://newlinesmag.com/essays/noon-meem-danish-brought-the-black-experience-to-urdu-poetry/">
+                        <img
+                            src="assets/images/press/newlines.jpg"
+                            alt="Generation Ad"
+                            class="w-full aspect-video object-cover rounded-lg"
+                        />
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div id="event_photo" class="border rounded-lg overflow-hidden">
+    <button
+      @click="active = active === 2 ? null : 2;
       $nextTick(() => {
             setTimeout(() => {
             const el = document.getElementById('title');
@@ -277,14 +415,14 @@
     >
       <span>Event</span>
       <svg class="w-5 h-5 transition-transform"
-        :class="{ 'rotate-180': active != 1 }"
+        :class="{ 'rotate-180': active != 2 }"
         fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
           d="m5 15 7-7 7 7" />
       </svg>
     </button>
 
-    <div x-show="active === 1" x-collapse class="p-5 border-t">
+    <div x-show="active === 2" x-collapse class="p-5 border-t">
       
 
         <section class="text-neutral-700 ">
@@ -418,10 +556,10 @@
     </div>
   </div>
 
-  <!-- Row 2 -->
+  <!-- Row 3 -->
   <div id="dining_photo" class="border rounded-lg overflow-hidden">
     <button
-      @click="active = active === 2 ? null : 2;
+      @click="active = active === 3 ? null : 3;
        $nextTick(() => {
             setTimeout(() => {
             const el = document.getElementById('event_photo');
@@ -433,14 +571,14 @@
     >
       <span>Dining</span>
       <svg class="w-5 h-5 transition-transform"
-        :class="{ 'rotate-180': active != 2 }"
+        :class="{ 'rotate-180': active != 3 }"
         fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
           d="m5 15 7-7 7 7" />
       </svg>
     </button>
 
-    <div x-show="active === 2" x-collapse class="p-5 border-t">
+    <div x-show="active === 3" x-collapse class="p-5 border-t">
         
 
         <section class="text-neutral-700">
@@ -552,10 +690,10 @@
     </div>
   </div>
 
-  <!-- Row 3 -->
+  <!-- Row 4 -->
   <div id="product_photo" class="border rounded-lg overflow-hidden">
     <button
-      @click="active = active === 3 ? null : 3;
+      @click="active = active === 4 ? null : 4;
       $nextTick(() => {
             setTimeout(() => {
             const el = document.getElementById('dining_photo');
@@ -574,7 +712,7 @@
       </svg>
     </button>
 
-    <div x-show="active === 3" x-collapse class="p-5 border-t">
+    <div x-show="active === 4" x-collapse class="p-5 border-t">
       <section class="text-neutral-700">
         <div class="container w-full">
             <div
@@ -652,10 +790,10 @@
     </div>
   </div>
 
-  <!-- Row 4 -->
+  <!-- Row 5 -->
   <div id="portrait_photo" class="border rounded-lg overflow-hidden">
     <button
-      @click="active = active === 4 ? null : 4;
+      @click="active = active === 5 ? null : 5;
       $nextTick(() => {
             setTimeout(() => {
             const el = document.getElementById('product_photo');
@@ -674,7 +812,7 @@
       </svg>
     </button>
 
-    <div x-show="active === 4" x-collapse class="p-5 border-t">
+    <div x-show="active === 5" x-collapse class="p-5 border-t">
       <section class="text-neutral-700">
         <div class="container w-full">
             <div
@@ -793,10 +931,10 @@
     </div>
   </div>
 
-  <!-- Row 5 -->
+  <!-- Row 6 -->
   <div id="fashion_photo" class="border rounded-lg overflow-hidden">
     <button
-      @click="active = active === 5 ? null : 5;
+      @click="active = active === 6 ? null : 6;
       $nextTick(() => {
             setTimeout(() => {
             const el = document.getElementById('portrait_photo');
@@ -815,7 +953,7 @@
       </svg>
     </button>
 
-    <div x-show="active === 5" x-collapse class="p-5 border-t">
+    <div x-show="active === 6" x-collapse class="p-5 border-t">
       <section class="text-neutral-700">
         <div class="container w-full">
             <div
@@ -924,10 +1062,10 @@
     </div>
   </div>
 
-  <!-- Row 6 -->
+  <!-- Row 7 -->
   <div id="street_photo" class="border rounded-lg overflow-hidden">
     <button
-      @click="active = active === 6 ? null : 6;
+      @click="active = active === 7 ? null : 7;
       $nextTick(() => {
             setTimeout(() => {
             const el = document.getElementById('fashion_photo');
@@ -946,7 +1084,7 @@
       </svg>
     </button>
 
-    <div x-show="active === 6" x-collapse class="p-5 border-t">
+    <div x-show="active === 7" x-collapse class="p-5 border-t">
       <section class="text-neutral-700">
         <div class="container w-full">
             <div
@@ -1092,104 +1230,6 @@
             </div>
         </div>
         </section>
-    </div>
-  </div>
-
-
-  <!-- Row 7 -->
-  <div id="press_photo" class="border rounded-lg overflow-hidden">
-    <button
-      @click="active = active === 7 ? null : 7;
-      $nextTick(() => {
-            setTimeout(() => {
-            const el = document.getElementById('street_photo');
-            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 50); // 50ms delay gives the content time to expand/collapse
-        })
-        "
-      class="flex justify-center items-center gap-3 w-full p-5 text-center font-medium"
-
-    >
-      <span>Press</span>
-      <svg class="w-5 h-5 transition-transform"
-        :class="{ 'rotate-180': active != 7 }"
-        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="m5 15 7-7 7 7" />
-      </svg>
-    </button>
-
-    <div x-show="active === 7" x-collapse class="p-5 border-t">
-      <div class="container mx-auto">
-            <!-- Media on Right -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-16">
-    
-                <!-- Text -->
-                <div class="order-1">
-                    <h2 class="text-3xl text-yellow-600 font-bold mb-4">Middle East Eye</h2>
-                    <p class="text-lg italic text-gray-700 mb-4 dark:text-gray-300">
-                    NYC real estate expo promoting sale of 'stolen land' in Palestine descends into violence 
-                    </p>
-                    <ul class="max-w-md space-y-2 text-gray-300 text-body list-none list-inside mb-4">
-                        <li>
-                            Written by: MEE Staff
-                        </li>
-                        <li class="text-yellow-600">
-                            Photo Credit: Haseeb Amin
-                        </li>
-                    </ul> 
-                    <a href="https://www.middleeasteye.net/trending/new-york-real-estate-expo-stolen-land-sale-palestine-descends-violence" 
-                    class="text-lg italic  mb-4 text-blue-600">Link to Article</a>      
-                </div>
-
-                <!-- Media -->
-                <div class="order-2 md:order-1">
-                    <a href="https://www.middleeasteye.net/trending/new-york-real-estate-expo-stolen-land-sale-palestine-descends-violence">
-                        <img
-                            src="assets/images/press/mee.png"
-                            alt="Kitchen Closed"
-                            class="w-full aspect-video object-cover rounded-lg"
-                        />
-                    </a>
-                </div>
-
-            </div>
-            <!-- Media on Left -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-16">
-    
-
-                <!-- Text -->
-                <div class="order-2">
-                    <h2 class="text-3xl text-yellow-600 font-bold mb-4">New Lines Magazine</h2>
-                    <p class="text-lg italic text-gray-700 mb-4 dark:text-gray-300">
-                     Noon Meem Danish Brought the Black Experience to Urdu Poetry
-                    His work redefined what verse could say in Pakistan — and who it could speak for
-                    </p>
-                    <ul class="max-w-md space-y-2 text-gray-300 text-body list-none list-inside mb-4">
-                        <li>
-                            Written by: Samee Ahmad
-                        </li>
-                        <li class="text-yellow-600">
-                            Photo Credit: Haseeb Amin
-                        </li>
-                    </ul> 
-                    <a href="https://newlinesmag.com/essays/noon-meem-danish-brought-the-black-experience-to-urdu-poetry/" 
-                    class="text-lg italic mb-4 text-blue-600">Link to Article</a>      
-                </div>
-
-                <!-- Media -->
-                <div class="order-2 md:order-1">
-                    <a href="https://newlinesmag.com/essays/noon-meem-danish-brought-the-black-experience-to-urdu-poetry/">
-                        <img
-                            src="assets/images/press/newlines.jpg"
-                            alt="Generation Ad"
-                            class="w-full aspect-video object-cover rounded-lg"
-                        />
-                    </a>
-                </div>
-
-            </div>
-        </div>
     </div>
   </div>
 
