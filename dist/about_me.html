@@ -59,7 +59,12 @@
            <img
               src="assets/images/website/logo2_w.png"
               alt="Images by Haseeb Amin"
-              class="block h-8 md:h-10 w-auto"
+              class="h-8 md:h-10 w-auto hidden dark:block"
+            />
+            <img
+              src="assets/images/website/logo_light.png"
+              alt="Images by Haseeb Amin"
+              class="block h-8 md:h-10 w-auto dark:hidden"
             />
           </a>
         </div>
@@ -120,7 +125,7 @@
               <div
                 x-show="dropdownopen"
                 @click.outside="dropdownopen = false"
-                class="absolute left-0 mt-3 w-48 bg-white dark:bg-neutral-900 shadow-lg rounded-lg"
+                class="absolute left-0 mt-3 w-48 bg-white dark:bg-neutral-900 shadow-lg rounded-lg z-50"
               >
                 <a href="photo.html" class="block px-5 py-3">Photography</a>
                 <a href="film.html" class="block px-5 py-3">Film</a>
@@ -173,7 +178,7 @@
           <li x-data="{ dropdownopen: false }" class="relative">
             <button
               @click="dropdownopen = !dropdownopen"
-              class="font-signika text-2xl flex items-center gap-1"
+              class="font-signika text-2xl flex items-center gap-1 z-50"
             >
               My Work
               <svg class="w-4 h-4 mt-1" fill="currentColor" viewBox="0 0 20 20">
@@ -278,7 +283,7 @@
           <span class="animate-wave">👋</span>
         </p>
         <p class="mb-4">
-          I'm a Brooklyn-based Pakistani-American Filmmaker and Photographer, born and raised in Oklahoma. 
+          I'm a Brooklyn-based Pakistani-American Filmmaker and Photographer, born and raised in Oklahoma. I've had my work featured in Vogue, Middle East Eye, and Newlines Magazine.
         </p>
         <p class="mb-4">
           I am available for work across the medium of image. I offer services for photography, film editing, videography/cinematography, and more.
